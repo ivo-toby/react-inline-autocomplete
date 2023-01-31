@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { InlineSuggest } from './inline-suggest';
 
@@ -13,8 +12,8 @@ function App() {
     const users = [
         {
             id: 1,
-            username: 'xmazu',
-            email: 'xmazu@yahoo.com',
+            username: 'ivo toby',
+            email: 'spam@me.com',
         },
         {
             id: 2,
@@ -25,16 +24,13 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <InlineSuggest
-                    suggestions={users}
-                    inputValue={value}
-                    onInputChange={onChangeValue}
-                    onMatch={(v) => console.log(v)}
-                    getSuggestionValue={(v) => v.username}
-                />
-            </header>
+            <InlineSuggest
+                suggestions={users}
+                inputValue={value}
+                onInputChange={onChangeValue}
+                onMatch={(v) => console.log(v)}
+                getSuggestionValue={(v) => v.username}
+            />
         </div>
     );
 }
