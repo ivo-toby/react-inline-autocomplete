@@ -3,5 +3,5 @@ export enum KeyEnum {
     ENTER = 13,
     RIGHT_ARROW = 39,
     DOWN_ARROW = 40,
-    UP_ARROW = 38
+    UP_ARROW = 38,
 }
