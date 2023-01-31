@@ -17,7 +17,18 @@ function App() {
         },
         {
             id: 2,
+            username: 'ivo test',
+            email: 'john@doe.com',
+        },
+
+        {
+            id: 2,
             username: 'john_doe',
+            email: 'john@doe.com',
+        },
+        {
+            id: 3,
+            username: 'vikas kumar',
             email: 'john@doe.com',
         },
     ];

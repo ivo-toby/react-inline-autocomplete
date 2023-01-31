@@ -67,7 +67,7 @@ export function InlineSuggest<T>({
         }
     };
 
-    const handleOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const handleOnChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
         const valueFromEvent = e.currentTarget.value;
 
         const newMatchedArray = memoizedFilterSuggestions(
@@ -87,7 +87,7 @@ export function InlineSuggest<T>({
         }
     };
 
-    const handleOnKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const handleOnKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
         if (activeIndex === -1) {
             return;
         }
@@ -121,7 +121,7 @@ export function InlineSuggest<T>({
         }
     };
 
-    const handleOnKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const handleOnKeyUp = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
         const { keyCode } = e;
 
         if (
