@@ -1,0 +1,77 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": ["prettier", "react-hooks"],
+    "env": {
+        "browser": true
+    },
+
+    "rules": {
+        "prettier/prettier": "warn",
+        "max-len": 1,
+        "indent": "off",
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/member-delimiter-style": "off",
+        "@typescript-eslint/prefer-interface": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "lines-between-class-members": "off",
+        "react/jsx-filename-extension": "off",
+        "react/prop-types": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/react-in-jsx-scope": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": [
+            "warn",
+            {
+                "additionalHooks": "(useRecoilCallback|useRecoilTransaction_UNSTABLE)"
+            }
+        ],
+        "react/function-component-definition": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "react/no-did-update-set-state": "off",
+        "no-useless-escape": "off",
+        "@typescript-eslint/return-await": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
+        "curly": "error",
+        "react/jsx-curly-spacing": ["warn", "never"],
+        "@typescript-eslint/indent": [
+            "warn", // Dit zou later een error moeten worden
+            4,
+            {
+                "SwitchCase": 1,
+                "FunctionDeclaration": {
+                    "parameters": "first"
+                },
+                "FunctionExpression": {
+                    "parameters": "first"
+                }
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["*.js"],
+            "rules": {
+                "@typescript-eslint/no-var-requires": "off"
+            }
+        }
+    ],
+
+    "root": true
+}
